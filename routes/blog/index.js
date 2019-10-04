@@ -6,6 +6,6 @@ const { getBlog, postBlog, putBlog, deleteBlog } = require("./controllers");
 router.get("/", getBlog);
 router.post("/", postBlog)
 router.put("/", putBlog)
-router.delete("/", deleteBlog)
+router.delete("/:id", deleteBlog)
 
 module.exports = router;

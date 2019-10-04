@@ -18,7 +18,6 @@ module.exports = {
       .catch(error => res.send(error));
   },
   putBlog: (req, res) => {
-    console.log(req.body)
     blog.update(
       {
         title: req.body.title,
@@ -37,7 +36,7 @@ module.exports = {
   deleteBlog: (req, res) => {
     blog.destroy({
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     })
       .then(result => {
